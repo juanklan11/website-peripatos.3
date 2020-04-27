@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+            {% for post in posts.items %}
+                <div class="card" style="background-color:#d5f0e8">
+                    <div class="container ">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="" href="{{ url_for('users.user_posts', username=post.author.username) }}">
+                                    <img class="rounded-circle " width="70" height="70" src="{{ url_for('static', filename='img/profile_pics/' + post.author.image_file) }}">
+                                    {{ post.author.username }}
+                                    </a>
+                                    <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-body">
+                                        <img class="img-fluid" width="400" height="300" src="{{ url_for('static', filename='img/posts_pics/' + post.imagen) }}">
+                                    </div>
+                                </div>
+                                     <div class="col">
+
+                                     <div class="card bg-light mb-3" style="width: 21.5rem;">
+                                          <div class="card-body">
+                                            <h1 class="card-title">
+
+                                        <a class="card-title text-center" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a>
+
+                                            </h1>
+
+
+                                            <h6 class="card-subtitle mb-2 text-muted">{{post.content}}</h6>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="card-link">Card link</a>
+                                            <a href="#" class="card-link">Another link</a>
+                                          </div>
+                                     </div>
+                                         <h2 class="card-title  text-right">  {%if post.bins == 'Blue Bin'%}
+                                            {{post.bins}}
+                                            <img src="static/img/other/bluebinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'Gelber Sack' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/yellowbinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'Green Bin' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/greenbinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'Restmull Bin' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/blackbinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'Brown Bin' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/brownbinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'Gelber Sack' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/yellowbinnbg.png" width="150" height="150" alt="">
+                                        {%elif post.bins == 'E-waste Bin' %}
+                                            {{post.bins}}
+                                            <img src="static/img/other/greybinnbg.png" width="150" height="150" alt="">
+                                        {%endif%}
+
+                                    </h2>
+
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+                {% if posts.page == page_num %}
+                    <a class="btn btn-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+                {% else %}
+                    <a class="btn btn-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+                {% endif %}
+            {% else %}
+                ...
+            {% endif %}
+        {% endfor %}
+        </div>
+    <div class="row">
+        <div class="col">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                        <legend class="border-bottom">Find Waste</legend>
+                            <div class="form-group">
+                                {{ form.waste.label(class="form-control-label") }}
+                                {% if form.waste.errors %}
+                                {{ form.waste(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.waste.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                    {{ form.waste(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-info") }}
+                        </div>
+                </form>
+        </div>
+        </div>
+</div>
+
+
+
+
+
+
+
+{% endblock content %}

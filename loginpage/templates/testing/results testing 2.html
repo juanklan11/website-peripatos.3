@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+{% block title%}
+    VERDESMART - Results
+{%endblock%}
+
+{% block content%}
+<div class="container">
+    <div class="container">
+    <div class="row">
+        <div class="col-md">
+
+                {%if post != None %}
+
+                    <div class="card" style="background-color:#d5f0e8">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="" href="{{ url_for('users.user_posts', username=post.author.username) }}">
+                                    <img class="rounded-circle account-img w-25 p-3 float-left" src="{{ url_for('static', filename='img/profile_pics/' + post.author.image_file) }}">
+                                    {{ post.author.username }}
+                                    </a>
+                                    <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                                </div>
+                                <div class="col">
+                                    <h1 class="display-2">
+                                        <a class="card-title text-center" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a>
+                                    <h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+
+                                </div>
+                                <div class="col">
+                                        <h1 class="card-title  text-center"> goes in the </h1>
+                                </div>
+                                <div class="col">
+                                    <h1 class="card-title  text-left"> {{ post.bins }} </h1>
+                                </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col">
+                                    <div class="card-body">
+                                        <img class="img-fluid w-100" src="{{ url_for('static', filename='img/posts_pics/' + post.imagen) }}">
+                                        <img class="rounded-circle account-img w-25 p-3 float-right" src="{{ url_for('static', filename='img/profile_pics/' + post.author.image_file) }}">
+                                        <h5 class="card-title"><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h5>
+                                        <p class="card-text">{{ post.content }}</p>
+                                        <p class="card-text"><small class="text-muted"></small></p>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+        <div class="col-xs-6">
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                <legend class="border-bottom">Find Waste</legend>
+                    <div class="form-group">
+                        {{ form.waste.label(class="form-control-label") }}
+                        {% if form.waste.errors %}
+                            {{ form.waste(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                            {% for error in form.waste.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.waste(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-outline-info") }}
+                </div>
+            </form>
+        </div>
+       {%endif%}
+    </div>
+   </div>
+   <div class="container">
+       <div class="row">
+
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock content %}

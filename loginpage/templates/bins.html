@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{%block title%}
+Bins
+{%endblock%}
+{%block content%}
+
+
+
+
+<div class="container">
+    <div class="container">
+        <div class="col-xs-6">
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                <legend class="border-bottom">Find Bin</legend>
+                    <div class="form-group">
+                        {{ form.bin.label(class="form-control-label") }}
+                        {% if form.bin.errors %}
+                            {{ form.bin(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                            {% for error in form.bin.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.bin(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-info") }}
+                </div>
+            </form>
+        </div>
+
+
+        {%if waste >= 1 %}
+        <h1>{{caneca.items[0].bins}}</h1>
+            {%for number in range(waste)%}
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card" style="background-color:#d5f0e8">
+                            <div class="container ">
+                                <div class="row">
+                                    <div class="col">
+                                       <img class="img-thumbnail w-75" src="{{ url_for('static', filename='img/posts_pics/' + caneca.items[number].imagen) }}">
+                                    </div>
+                                <div class="row">
+                                    <div class="col text-center">
+                                         {{caneca.items[number].title}}
+                                    </div>
+                                </div>
+
+
+
+
+            {%endfor%}
+         {%else%}
+                                    <h1>Fcuk u</h1>
+        {%endif%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>
+
+
+{%endblock%}
+
+
+

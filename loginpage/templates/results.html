@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{%block title%}
+Bins
+{%endblock%}
+{%block content%}
+
+
+
+
+<div class="container">
+    <div class="container">
+        <div class="col-xs-6">
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                <legend class="border-bottom">Find Bin</legend>
+                    <div class="form-group">
+                        {{ form.waste.label(class="form-control-label") }}
+                        {% if form.waste.errors %}
+                            {{ form.waste(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                            {% for error in form.waste.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                            </div>
+                            {% else %}
+                            {{ form.waste(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-info") }}
+                </div>
+            </form>
+        </div>
+
+
+        {%if amount >= 1 %}
+        <h1>{{post.items[0].title}}</h1>
+            {%for number in range(amount)%}
+                <div class="row">
+                    <div class="col-md">
+                        <div class="card" style="background-color:#d5f0e8">
+                            <div class="container ">
+                                <div class="row">
+                                    <div class="col">
+                                        <img class="img-fluid " width="250" height="200" src="{{ url_for('static', filename='img/posts_pics/' + post.items[number].imagen) }}">
+                                    </div>
+            {%endfor%}
+         {%else%}
+                                    <h1>Fcuk u</h1>
+        {%endif%}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>
+</div>
+
+
+{%endblock%}
+

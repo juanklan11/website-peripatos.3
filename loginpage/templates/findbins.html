@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content%}
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                <legend class="border-bottom">Find Bin</legend>
+                    <div class="form-group">
+                        {{ form.bin.label(class="form-control-label") }}
+                        {% if form.bin.errors %}
+                            {{ form.bin(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                            {% for error in form.bin.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.bin(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    {{ form.submit(class="btn btn-info") }}
+                </div>
+            </form>
+
+
+{%endblock%}

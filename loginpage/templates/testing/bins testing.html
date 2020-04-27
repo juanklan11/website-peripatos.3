@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!--{% for post in posts.items%}-->
+ <h1 class="display-2">
+       {{ posts.bins }}
+</h1>
+<!--{% endfor %}-->
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            {% for post in posts.items %}
+                <div class="card" style="background-color:#d5f0e8">
+                    <div class="container ">
+                            <div class="row">
+                                <div class="col">
+                                    <a class="" href="{{ url_for('users.user_posts', username=post.author.username) }}">
+                                    <img class="rounded-circle account-img w-50 p-3 float-left" src="{{ url_for('static', filename='img/profile_pics/' + post.author.image_file) }}">
+                                    {{ post.author.username }}
+                                    </a>
+                                    <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                                </div>
+                                <div class="col">
+                                    <h1 class="display-2">
+                                        <a class="card-title text-center" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a>
+                                    <h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+
+                                </div>
+                                <div class="col">
+                                    <h2 class="card-title  text-right"> goes in the </h2>
+                                </div>
+                                <div class="col">
+                                    <h2 class="card-title  text-left"> {{ post.bins }} </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-body">
+                                        <img class="img-fluid w-100" src="{{ url_for('static', filename='img/posts_pics/' + post.imagen) }}">
+                                         <p class="article-content">{{ post.content }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+                {% if posts.page == page_num %}
+                    <a class="btn btn-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+                {% else %}
+                    <a class="btn btn-outline-info mb-4" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a>
+                {% endif %}
+            {% else %}
+                ...
+            {% endif %}
+        {% endfor %}
+        </div>
+    <div class="row">
+        <div class="col">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                        <fieldset class="form-group">
+                        <legend class="border-bottom">Find Waste</legend>
+                            <div class="form-group">
+                                {{ form.waste.label(class="form-control-label") }}
+                                {% if form.waste.errors %}
+                                {{ form.waste(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.waste.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                                {% else %}
+                                    {{ form.waste(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+                        </fieldset>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                        </div>
+                </form>
+        </div>
+        </div>
+</div>
+{% endblock content %}

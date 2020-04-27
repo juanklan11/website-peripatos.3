@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <img class="rounded-circle account-img" src="{{ image_file }}">
+        <div class="media-body">
+          <h2 class="account-heading">{{ current_user.username }}</h2>
+          <p class="text-secondary">{{ current_user.email }}</p>
+        </div>
+      </div>
+    </div>
+    <div>
+        {% for item in values %}
+        <h1 class="mb-3">Posts by {{ item.username }} ({{ item.posts }})</h1>
+        {% endfor %}
+    </div>
+{% endblock content %}
