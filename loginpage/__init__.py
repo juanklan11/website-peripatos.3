@@ -16,7 +16,7 @@ login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail()
 # admin = Admin(template_mode='bootstrap3')
-admin = Admin(name='Dashboard', template_mode='bootstrap3')
+admin = Admin(name='Dashboard')
 # user_manager = UserManager()
 # security = Security()
 # appbuilder = AppBuilder()
