@@ -16,10 +16,99 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86be01ad-c460-41fd-91f6-af32e9b0a139" name="Default Changelist" comment="requirement file">
+    <list default="true" id="86be01ad-c460-41fd-91f6-af32e9b0a139" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/loginpage/static/img/posts_pics/8c223d0751b923df.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/loginpage/static/img/posts_pics/e34deaef38e63507.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginpage/bins/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/loginpage/bins/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/main/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/main/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/posts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/posts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/posts/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/posts/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/posts/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/posts/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/site.db" beforeDir="false" afterPath="$PROJECT_DIR$/loginpage/site.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/css/bootstrap2/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/css/bootstrap2/rediscli.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/css/bootstrap3/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/css/bootstrap3/rediscli.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/css/bootstrap3/submenu.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/bs2_modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/bs3_modal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/details_filter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/filters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/admin/js/rediscli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/bootstrap-daterangepicker/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/bootstrap-daterangepicker/daterangepicker-bs2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/bootstrap-daterangepicker/daterangepicker-bs3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/bootstrap-daterangepicker/daterangepicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/layers-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/layers.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/marker-icon-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/marker-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/marker-shadow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/spritesheet-2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/spritesheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/images/spritesheet.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/leaflet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/leaflet.draw.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/leaflet.draw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/leaflet.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/leaflet/leaflet.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2-bootstrap3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2-spinner.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/select2/select2x2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/css/bootstrap2-editable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/css/bootstrap3-editable.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/img/clear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/img/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/js/bootstrap2-editable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/static/vendor/x-editable/js/bootstrap3-editable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/adm.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/actions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/file/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/file/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/file/modals/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/lib.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/master.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/inline_field_list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/inline_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/inline_list_base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/layout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/modals/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/modals/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/modals/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/model/row_actions.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/rediscli/console.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/rediscli/response.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/admin1/static.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/bins/green bin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/bins/restmull bin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/home1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/initiatives.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/layout1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/my_master.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/newlayout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/probando.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/loginpage/templates/tree_list.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,19 +143,19 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin" />
-      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\admin" />
-      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css\bootstrap\bootstrap3\swatch\None" />
-      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css\bootstrap\bootstrap3" />
-      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates" />
       <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css\bootstrap" />
       <recent name="C:\Users\juan_\PycharmProjects\websites\website-peripatos'" />
       <recent name="C:\Users\juan_\PycharmProjects\websites\website-peripatos'\loginpage" />
       <recent name="C:\Users\juan_\PycharmProjects\websites\website-peripatos'\loginpage\static\img\profilepics" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin" />
+      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\admin" />
+      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css\bootstrap\bootstrap3\swatch\None" />
+      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css\bootstrap\bootstrap3" />
+      <recent name="C:\Users\juan_\Desktop\website-peripatos'\loginpage\templates\admin\css" />
     </key>
   </component>
   <component name="RunManager" selected="Python.run">
@@ -217,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588023641867</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="requirement file">
+      <created>1588061931969</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588061931969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,10 +440,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="957" y="168" key="#xdebugger.XInspectDialog/0.0.1536.824@0.0.1536.824" timestamp="1583184852261" />
-    <state x="129" y="0" key="CommitChangelistDialog2" timestamp="1588024057654">
+    <state x="129" y="0" key="CommitChangelistDialog2" timestamp="1588061930079">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="129" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588024057654" />
+    <state x="129" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588061930079" />
     <state x="208" y="280" width="352" height="318" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1585341885611">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -376,22 +472,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="242" y="313" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1588023929071" />
-    <state width="1515" height="149" key="GridCell.Tab.0.bottom" timestamp="1588026449789">
+    <state width="1515" height="147" key="GridCell.Tab.0.bottom" timestamp="1588063715486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588026449789" />
-    <state width="1515" height="149" key="GridCell.Tab.0.center" timestamp="1588026449789">
+    <state width="1515" height="147" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588063715486" />
+    <state width="1515" height="147" key="GridCell.Tab.0.center" timestamp="1588063715486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="149" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588026449789" />
-    <state width="1515" height="149" key="GridCell.Tab.0.left" timestamp="1588026449788">
+    <state width="1515" height="147" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588063715486" />
+    <state width="1515" height="147" key="GridCell.Tab.0.left" timestamp="1588063715485">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="149" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588026449788" />
-    <state width="1515" height="149" key="GridCell.Tab.0.right" timestamp="1588026449789">
+    <state width="1515" height="147" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588063715485" />
+    <state width="1515" height="147" key="GridCell.Tab.0.right" timestamp="1588063715486">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="149" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588026449789" />
+    <state width="1515" height="147" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588063715486" />
     <state width="745" height="259" key="GridCell.Tab.1.bottom" timestamp="1588002394127">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -412,10 +508,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="119" y="48" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588022485738" />
-    <state x="0" y="135" key="Vcs.Push.Dialog.v2" timestamp="1588021796918">
+    <state x="0" y="135" key="Vcs.Push.Dialog.v2" timestamp="1588061936641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="0" y="135" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588021796918" />
+    <state x="0" y="135" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588061936641" />
     <state x="94" y="100" width="581" height="630" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1588024691897">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -444,16 +540,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="46" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587837843567" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/loginpage/main/routes.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

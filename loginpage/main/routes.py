@@ -1,9 +1,11 @@
 from flask import render_template, request, Blueprint, url_for, flash, redirect
 from loginpage.models import Post
 from loginpage.posts.forms import FindForm
-from flask_login import login_user, current_user
+from flask_login import current_user
 
 main = Blueprint('main', __name__)
+
+
 @main.route("/", methods=['GET', 'POST'])
 @main.route("/home", methods=['GET', 'POST'])
 def home():
@@ -28,57 +30,9 @@ def home():
             return render_template('results.html', post=post, form=form, amount=amount)
     return render_template('home.html', posts=posts, form=form, title='Home', suffix=suffix)
 
-
-# {{posts.items[1].author.username}}
-# < img class ="rounded-circle " width="70" height="70" src="{{ url_for('static', filename='img/other/' + posts.items[1].bins)+suffix}}" >
-
-
-# @main.route("/", methods=['GET', 'POST'])
-# @main.route("/home", methods=['GET', 'POST'])
-# def home():
-#     page = request.args.get('page', 1, type=int)
-#     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-#     form = FindForm()
-#     if form.validate_on_submit():
-#         string = form.waste.data.capitalize()
-#         post = Post.query.filter_by(title=string).first()
-#         if post is None:
-#             if current_user.is_authenticated:
-#                 flash('Item not in list not in list, post your waste ', 'warning')
-#                 return redirect(url_for('posts.new_post'))
-#             else:
-#                 flash('Item not in list not in list, to register it please Log in or Sign up', 'warning')
-#                 return redirect(url_for('users.login'))
-#         else:
-#             return render_template('results.html', post=post, form=form)
-#     return render_template('home.html', posts=posts, form=form, title='Home')
-
-# @main.route("/", methods=['GET', 'POST'])
-# @main.route("/home", methods=['GET', 'POST'])
-# def home():
-#     page = request.args.get('page', 1, type=int)
-#     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
-#     form = FindForm()
-#     if form.validate_on_submit():
-#         post = Post.query.filter_by(title=form.waste.data).first()
-#         if post is None:
-#             if current_user.is_authenticated:
-#                 flash('Item not in list not in list, post your waste ', 'warning')
-#                 return redirect(url_for('posts.new_post'))
-#             else:
-#                 flash('Item not in list not in list, to register it please Log in or Sign up', 'warning')
-#                 return redirect(url_for('users.login'))
-#         else:
-#             return render_template('results.html', post=post)
-#     return render_template('home.html', posts=posts, form=form)
-
-
 @main.route("/about")
 def about():
     return render_template('about.html', title='About')
 
 
 
-# @main.route('/initiatives')
-# def initiatives():
-#     return render_template('initiatives.html', title='Initiatives')

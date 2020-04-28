@@ -11,7 +11,6 @@ class PostForm(FlaskForm):
                                                    ('Gelber Sack', 'Packaging Recycling'),
                                                    ('Restmull Bin', 'Residual Waste'),
                                                    ('Brown Bin', 'Bio-waste'), ('E-waste Bin', 'Electronic Waste')])
-    # bins = SelectField('Disposal Method', choices=[('Green Bin', 'BioWaste'), ('Grey Bin', 'Rest bin')])
     submit = SubmitField('Post')
 
 

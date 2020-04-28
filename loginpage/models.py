@@ -4,12 +4,9 @@ from flask import current_app
 from loginpage import db, login_manager
 from flask_login import UserMixin, current_user
 from flask_admin.contrib.sqla import ModelView
-from flask_admin import AdminIndexView, BaseView
-from flask_security import Security, SQLAlchemyUserDatastore
+from flask_admin import AdminIndexView
 from flask import render_template, redirect, url_for, request, flash
-from tablib import  *
-# from flask_appbuilder.models.sqla.interface import SQLAInterface
-from flask_table import Table, Col
+
 
 
 @login_manager.user_loader
@@ -51,17 +48,9 @@ class User(db.Model, UserMixin):
         return User.query.get(user_id)
 
 
-    # def is_admin(self):
-    #     return self.access == ACCESS['admin']
-    #
-    # def allowed(self, access_level):
-    #     return self.access >= access_level
-
     def __str__(self):
         return "{}".format(self.username)
 
-    # def __repr__(self):
-    #     return f"User('{self.username}', '{self.email}', '{self.image_file}', '{self.roles}')"
 
 
 class Role(db.Model):
@@ -92,40 +81,9 @@ class Post(db.Model):
     imagen = db.Column(db.String(20), nullable=False, default='default_posts.jpg')
     bins = db.Column(db.String(20), nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    # featured_post_id = db.Column(db.Integer, db.ForeignKey('post.id'))
-    # featured_post = db.relationship('Post', foreign_keys=[featured_post_id])
+
     def __str__(self):
         return "{}".format(self.title)
-
-    # def __repr__(self):
-    #     return f"Post('{self.title}', '{self.date_posted}',{self.imagen})"
-
-# class Tree(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     name = db.Column(db.String(64))
-#
-#     # recursive relationship
-#     parent_id = db.Column(db.Integer, db.ForeignKey('tree.id'))
-#     parent = db.relationship('Tree', remote_side=[id], backref='children')
-#
-#     def __str__(self):
-#         return "{}".format(self.name)
-
-
-# class TreeView(ModelView):
-#     list_template = 'tree_list.html'
-#     column_auto_select_related = True
-#     column_list = [
-#         'username',
-#         'email',
-#             ]
-#
-#     column_filters = ['id', 'username', 'email', ]
-#
-#     # override the 'render' method to pass your own parameters to the template
-#     def render(self, template, **kwargs):
-#         return super(TreeView, self).render(template, foo="bar", **kwargs)
-
 
 
 class MyModelView(ModelView):
@@ -139,9 +97,10 @@ class MyModelView(ModelView):
                   'description']
     def is_accessible(self):
         return current_user.is_authenticated
-        # return current_user.is_authenticated
+
     def not_auth(self):
         return render_template('403.html')
+
 
 class MyUserView(ModelView):
     can_edit = True
@@ -190,32 +149,12 @@ class MyAdminIndexView(AdminIndexView):
         if current_user.is_authenticated:
             for number in range(len(current_user.roles)):
                 return current_user.roles[number].name == 'Admin'
-        # return current_user.is_authenticated and current_user.username == 'Admin'
+
 
     def inaccessible_callback(self, name, **kwargs):
         if not self.is_accessible():
             flash("You do not have permission to do that (403). Please check your account's credentials and try again", 'warning')
             return redirect(url_for('main.home', next=request.url))
-        # return current_user.is_authenticated
-
-    # def __init__(self, *args, **kwargs):
-    #     self.roles_accepted = kwargs.pop('roles_accepted', list())
-    #     super(MyAdminIndexView, self).__init__(*args, **kwargs)
-
-# class GroupModelView(ModelView):
-#     datamodel = SQLAInterface(User)
-
-
-
-
-# class MyAdminIndexView(AdminIndexView):
-#     can_edit = True
-#     def is_accessible(self):
-#         return current_user.is_authenticated
-
-# class ContactModelView(ModelView):
-#     datamodel = SQLAInterface(User)
-
 
 
 

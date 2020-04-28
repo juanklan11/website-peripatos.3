@@ -5,16 +5,6 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from loginpage.config import Config
 from flask_admin import Admin
-from tablib import  *
-from flask_user import UserManager
-from flask_admin.base import MenuLink
-from flask_admin.contrib import sqla
-from flask_admin.contrib.sqla import filters
-from flask_admin.contrib.sqla.filters import BaseSQLAFilter, FilterEqual
-
-from flask_admin.contrib.sqla import ModelView
-from flask_security import Security, SQLAlchemyUserDatastore
-from flask_appbuilder import SQLA, AppBuilder
 
 
 
@@ -26,7 +16,7 @@ login_manager.login_view = 'users.login'
 login_manager.login_message_category = 'info'
 mail = Mail()
 # admin = Admin(template_mode='bootstrap3')
-admin = Admin(name='Dashboard')
+admin = Admin(name='Dashboard', template_mode='bootstrap3')
 # user_manager = UserManager()
 # security = Security()
 # appbuilder = AppBuilder()
