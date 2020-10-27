@@ -4,7 +4,7 @@ bs4==0.0.1
 certifi==2019.3.9
 chardet==3.0.4
 Click==7.0
-cryptography==2.7
+cryptography==3.2
 cycler==0.10.0
 Django==2.2.7
 django-six==1.0.4
