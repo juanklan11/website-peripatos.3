@@ -6,7 +6,7 @@ chardet==3.0.4
 Click==7.0
 cryptography==2.7
 cycler==0.10.0
-Django==2.2.7
+Django==2.2.21
 django-six==1.0.4
 docutils==0.15.2
 et-xmlfile==1.0.1
